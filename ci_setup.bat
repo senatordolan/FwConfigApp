@@ -1,0 +1,1 @@
+set PythonPath=C:\Python34\Lib;C:\Python34\Scripts;.\test;.
