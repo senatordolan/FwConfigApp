@@ -153,7 +153,7 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         remote_model = self.cbRemoteFwModel.currentText()
 
         # validate IP address received from GUI
-        if False == _validate_ip_address(local_id):
+        if _validate_ip_address(local_id) is False:
 
             # highlight incorrect field in red
             palette = QPalette()
@@ -163,7 +163,7 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
             # Provide message telling user that provided IP is invalid
             print("local ID invalid")
 
-        if False == _validate_ip_address(remote_id):
+        if _validate_ip_address(remote_id) is False:
 
             # highlight incorrect field in red
             palette = QPalette()
