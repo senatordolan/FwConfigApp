@@ -45,7 +45,7 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         self.cbRssEncryption.currentIndexChanged.connect(self.cbLocalEncryption.setCurrentIndex)
 
 
-    def _clearLocalIdFormatting(self):
+    def clearLocalIdFormatting(self):
         palette = QPalette()
         palette.setColor(QPalette.Text, Qt.black)
         self.leLocalId.setPalette(palette)
