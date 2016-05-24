@@ -187,23 +187,24 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
 
 
 def _validate_ip_address(ip_address):
-    # ------------------------------------------------------------------------
-    # _validate_ip_address
-    #
-    # This is a helper method that will be used to determine if the provided
-    # string represents a valid IP address.  Function is expecting a string
-    # to be provided in the form of 'xxx.xxx.xxx.xxx' where each octet is a
-    # string representation of an integer value in the range of 0-255
-    # (inclusive).
-    #
-    # args:
-    #   ip_address - string representation of an ip address in the form of
-    #                'xxx.xxx.xxx.xxx'
-    #
-    # returns:
-    #   True if the string represents a valid IP address, otherwise will
-    #   return False
-    # ------------------------------------------------------------------------
+    """
+    _validate_ip_address
+
+    This is a helper method that will be used to determine if the provided
+    string represents a valid IP address.  Function is expecting a string
+    to be provided in the form of 'xxx.xxx.xxx.xxx' where each octet is a
+    string representation of an integer value in the range of 0-255
+    (inclusive).
+
+    args:
+      ip_address - string representation of an ip address in the form of
+                   'xxx.xxx.xxx.xxx'
+
+    returns:
+      True if the string represents a valid IP address, otherwise will
+      return False
+    ------------------------------------------------------------------------
+    """
 
     # break ip address up and make sure each octet is at least a number
     octets = [int(x) for x in ip_address.split('.') if x.isdigit()]
@@ -220,11 +221,19 @@ def _validate_ip_address(ip_address):
 
 
 def _validate_ip_octet(ip_octet):
-    # ------------------------------------------------------------------------
-    # _validate_ip_octet
-    #
-    #
-    # ------------------------------------------------------------------------
+    """
+    _validate_ip_octet
+
+    This helper function will evaluate if the provided ip octext value is
+    valid (between min_ip_oct and max_ip_oct inclusive)
+
+    args:
+        ip_octet - octet alue to be evaluated
+
+    returns
+        True if proided octect value is valid, otherwise False
+    ------------------------------------------------------------------------
+    """
 
     min_ip_oct = 0
     max_ip_oct = 255
