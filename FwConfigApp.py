@@ -25,7 +25,7 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
 
         # connect up line edit format reset to clear 'error'
         # formatting when new values are entered into a line edit
-        self.leLocalId.textChanged.connect(self._clearLocalIdFormatting)
+        self.leLocalId.textChanged.connect(self.clearLocalIdFormatting)
         self.leRssId.textChanged.connect(self._clearRssIdFormatting)
 
         # connect up like input variables that should
