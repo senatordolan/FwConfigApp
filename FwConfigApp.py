@@ -18,10 +18,10 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         self.acActionClose.triggered.connect(self.close)
 
         # connect up clear forms menu action with clear_forms class member
-        self.acClearForms.triggered.connect(self._clearForms)
+        self.acClearForms.triggered.connect(self.clearForms)
 
         # connect up generate button with generate class member
-        self.pbGenerate.clicked.connect(self._generate)
+        self.pbGenerate.clicked.connect(self.generate)
 
         # connect up line edit format reset to clear 'error'
         # formatting when new values are entered into a line edit
@@ -84,12 +84,18 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         palette.setColor(QPalette.Text, Qt.black)
         self.leRssId.setPalette(palette)
 
-    def _clearForms(self):
-        # ------------------------------------------------------------------------
-        # _clearForms
-        #
-        #
-        # ------------------------------------------------------------------------
+    def clear_forms(self):
+        """
+        clear_forms
+
+        Class method will be used to clear both the local and remote form data.
+
+        args:
+            None.
+
+        returns:
+            None.
+        """
 
         # clear out all the form data
 
@@ -111,13 +117,25 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
 
 
 
-    def _generate(self):
-        # ------------------------------------------------------------------------
-        # _generate
-        #
-        #
-        # ------------------------------------------------------------------------
+    def generate(self):
+        """
+        generate
 
+        Class method will be used to harvest and validate the local
+        and remote form data.
+
+        Refactoring:
+        - implement a read method to harvest the field data
+        - implement formatting method to deal with highlighting
+          invalid input data
+        - implement methods for formatting output command sets
+
+        args:
+            None.
+
+        returns:
+            None.
+        """
         # harvest local firewall input values
         local_id = self.leLocalId.text()
         local_link_net = self.leLocalLinkNetwork.text()
