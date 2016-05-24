@@ -46,12 +46,40 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
 
 
     def clear_local_id_formatting(self):
+        """
+        clear_local_id_formatting
+
+        Class method will be used to clear any formatting associated with the
+        Qt line edit local ID field.  Typically this method is called after
+        a data entry error is detected and high lighted in the gui to clear
+        the formatting that caused the high lighted error.
+
+        args:
+            None.
+
+        returns:
+            None.
+        """
         palette = QPalette()
         palette.setColor(QPalette.Text, Qt.black)
         self.leLocalId.setPalette(palette)
 
 
     def clear_rss_id_formatting(self):
+        """
+        clear_local_id_formatting
+
+        Class method will be used to clear any formatting associated with the
+        Qt line edit RSS ID field.  Typically this method is called after
+        a data entry error is detected and high lighted in the gui to clear
+        the formatting that caused the high lighted error.
+
+        args:
+            None.
+
+        returns:
+            None.
+        """
         palette = QPalette()
         palette.setColor(QPalette.Text, Qt.black)
         self.leRssId.setPalette(palette)
