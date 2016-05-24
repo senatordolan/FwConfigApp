@@ -25,8 +25,8 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
 
         # connect up line edit format reset to clear 'error'
         # formatting when new values are entered into a line edit
-        self.leLocalId.textChanged.connect(self.clearLocalIdFormatting)
-        self.leRssId.textChanged.connect(self._clearRssIdFormatting)
+        self.leLocalId.textChanged.connect(self.clear_local_id_formatting)
+        self.leRssId.textChanged.connect(self.clear_rss_id_formatting)
 
         # connect up like input variables that should
         # match between both the local and remote settings
@@ -45,13 +45,13 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         self.cbRssEncryption.currentIndexChanged.connect(self.cbLocalEncryption.setCurrentIndex)
 
 
-    def clearLocalIdFormatting(self):
+    def clear_local_id_formatting(self):
         palette = QPalette()
         palette.setColor(QPalette.Text, Qt.black)
         self.leLocalId.setPalette(palette)
 
 
-    def _clearRssIdFormatting(self):
+    def clear_rss_id_formatting(self):
         palette = QPalette()
         palette.setColor(QPalette.Text, Qt.black)
         self.leRssId.setPalette(palette)
