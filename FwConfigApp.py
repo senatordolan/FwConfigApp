@@ -224,14 +224,14 @@ def _validate_ip_octet(ip_octet):
     """
     _validate_ip_octet
 
-    This helper function will evaluate if the provided ip octext value is
+    This helper function will evaluate if the provided ip octet value is
     valid (between min_ip_oct and max_ip_oct inclusive)
 
     args:
-        ip_octet - octet alue to be evaluated
+        ip_octet - octet value to be evaluated
 
     returns
-        True if proided octect value is valid, otherwise False
+        True if provided octet value is valid, otherwise False
     ------------------------------------------------------------------------
     """
 
