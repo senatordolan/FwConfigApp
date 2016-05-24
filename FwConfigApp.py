@@ -18,7 +18,7 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         self.acActionClose.triggered.connect(self.close)
 
         # connect up clear forms menu action with clear_forms class member
-        self.acClearForms.triggered.connect(self.clearForms)
+        self.acClearForms.triggered.connect(self.clear_forms)
 
         # connect up generate button with generate class member
         self.pbGenerate.clicked.connect(self.generate)
@@ -178,11 +178,13 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         # temporary debug feedback - remove once real file generation stuff lands here.
         print("Generate button pushed")
         local_fw_config = "Local Values\n"
-        local_fw_config += ("%s, %s, %s, %s, %s, %s" % (local_id, local_link_net, local_encryption, local_mtu, local_psk, local_model))
+        local_fw_config += ("%s, %s, %s, %s, %s, %s" %
+                           (local_id, local_link_net, local_encryption, local_mtu, local_psk, local_model))
         self.tbLocalFirewallConfig.setText(local_fw_config)
 
         remote_fw_config = "Remote Values\n"
-        remote_fw_config += ("%s, %s, %s, %s, %s, %s" % (remote_id, remote_link_net, remote_encryption, remote_mtu, remote_psk, remote_model))
+        remote_fw_config += ("%s, %s, %s, %s, %s, %s" %
+                            (remote_id, remote_link_net, remote_encryption, remote_mtu, remote_psk, remote_model))
         self.tbRemoteFirewallConfig.setText(remote_fw_config)
 
 
