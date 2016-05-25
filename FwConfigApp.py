@@ -192,13 +192,13 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         local_fw_config = "Local Values\n"
         local_fw_config += ("%s, %s, %s, %s, %s, %s" %
                             (local_id, local_link_net, local_encryption,
-                            local_mtu, local_psk, local_model))
+                             local_mtu, local_psk, local_model))
         self.tbLocalFirewallConfig.setText(local_fw_config)
 
         remote_fw_config = "Remote Values\n"
         remote_fw_config += ("%s, %s, %s, %s, %s, %s" %
                              (remote_id, remote_link_net, remote_encryption,
-                             remote_mtu, remote_psk, remote_model))
+                              remote_mtu, remote_psk, remote_model))
         self.tbRemoteFirewallConfig.setText(remote_fw_config)
 
 
@@ -273,7 +273,7 @@ def main(args):
     """
 
     # create an instance of the app and launch it!
-    app = QApplication(sys.argv)
+    app = QApplication(args)
     fcg = FwCfgGen()
     fcg.show()
     app.exec_()
@@ -282,4 +282,5 @@ def main(args):
 if __name__ == '__main__':
     #  pass sys args to main removing script name
     #  this is being done to support automated testing of the main function
-    main(sys.argv[1:])
+
+    main(sys.argv)
