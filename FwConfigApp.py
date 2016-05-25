@@ -179,12 +179,14 @@ class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
         print("Generate button pushed")
         local_fw_config = "Local Values\n"
         local_fw_config += ("%s, %s, %s, %s, %s, %s" %
-                           (local_id, local_link_net, local_encryption, local_mtu, local_psk, local_model))
+                           (local_id, local_link_net, local_encryption,
+                            local_mtu, local_psk, local_model))
         self.tbLocalFirewallConfig.setText(local_fw_config)
 
         remote_fw_config = "Remote Values\n"
         remote_fw_config += ("%s, %s, %s, %s, %s, %s" %
-                            (remote_id, remote_link_net, remote_encryption, remote_mtu, remote_psk, remote_model))
+                            (remote_id, remote_link_net, remote_encryption,
+                             remote_mtu, remote_psk, remote_model))
         self.tbRemoteFirewallConfig.setText(remote_fw_config)
 
 
@@ -243,6 +245,20 @@ def _validate_ip_octet(ip_octet):
 
 
 def main(args):
+    """
+    main
+
+    This is the main entry point for the Firewall Configuration
+    Generator tool.  This main method will create the gui instance
+    and then make the appropriate calls to have it rendered.
+
+    args:
+      None.
+
+    returns:
+      None
+    ------------------------------------------------------------------------
+    """
 
     # create an instance of the app and launch it!
     app = QApplication(sys.argv)
