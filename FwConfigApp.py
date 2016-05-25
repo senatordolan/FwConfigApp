@@ -1,19 +1,21 @@
 #!/usr/bin/env python
+"""
+Firewall Configuration Generator
+
+When run the FCG will pop up a GUI and ask for network settings
+at both a local and remote site.  The GUI will harvest the data
+provided and attempt to validate it.  Once validated the FCG
+will use the provided data in order to generate a set of firewall
+configuration settings that can then be used to configure a VPN
+connection.
+"""
 
 import sys
 
 from PyQt4.QtCore import Qt
-
 from PyQt4.QtGui import QMainWindow
 from PyQt4.QtGui import QPalette
 from PyQt4.QtGui import QApplication
-
-
-
-
-#from PyQt4.QtCore import *
-#from PyQt4.QtGui import *
-
 
 import FwCfgGenMain_ui
 
