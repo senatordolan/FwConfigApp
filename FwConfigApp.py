@@ -20,8 +20,13 @@ from PyQt4.QtGui import QApplication
 import FwCfgGenMain_ui
 
 
-# class that implements the firewall configuration generator
 class FwCfgGen(QMainWindow, FwCfgGenMain_ui.Ui_MainWindow):
+    """
+    FwCfgGen
+
+    FwCfgGen is the class that implements the firewall configuration generator
+    """
+
     def __init__(self):
         QMainWindow.__init__(self)
         self.setupUi(self)
