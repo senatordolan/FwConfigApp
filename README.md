@@ -37,7 +37,10 @@ Here is what I have done to install this project and get it running on Ubuntu 14
   - sudo apt-get install python3-dev
   
 6. Install SIP
-  SIP is a package that generates python bindings to C and C++ libraries. This is required when we use QT ask QT generates C libraries that that then need to be usable by python.
+  Installing SIP is the first step toward getting the necessary python components installed for QT. Instructions can be found at http://pyqt.sourceforge.net/Docs/PyQt4/installation.html
+  
+  SIP is a package that generates python bindings to C and C++ libraries. This is required when we use QT as QT generates C libraries that that then need to be usable by python.
+  
   - go to https://riverbankcomputing.com/software/sip/download and download the SIP source package for the LINUX OS
   - copy the downloaded tar file to /usr/src
   - open a terminal on your ubuntu machine
