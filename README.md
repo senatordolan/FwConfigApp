@@ -45,7 +45,7 @@ Here is what I have done to install this project and get it running on Ubuntu 14
   - copy the downloaded tar file to /usr/src
   - open a terminal on your ubuntu machine
   - cd /usr/src/
-  - tar -xvf sip-4.19.tar.gz
+  - sudo tar -xvf sip-4.19.tar.gz
     - Note - the name of your tar gz file may vary depending on latest available SIP version
   - cd /usr/src/sip-4.19
     - Note - the folder name may vary depending on latest available SIP version
@@ -56,6 +56,15 @@ Here is what I have done to install this project and get it running on Ubuntu 14
   - sudo make install
     - will install the recently made SIP libraries
 
+7. Install pyqt4.
+
+- go to https://riverbankcomputing.com/software/pyqt/download and download the pyqt4 source package for the LINUX OS
+  - copy the downloaded tar file to /usr/src
+  - open a terminal on your ubuntu machine
+  - cd /usr/src/
+  - sudo tar -xzf PyQt4_gpl_x11-4.12.tar.gz
+    - Note - the name of your tar gz file may vary depending on latest available pyqt version
+  
 
     
     
