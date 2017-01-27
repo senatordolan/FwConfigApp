@@ -61,7 +61,10 @@ Here is what I have done to install this project and get it running on Ubuntu 14
     - will install the recently made SIP libraries
 
 8. Install pyqt4.
-  - sudo apt-get install python3-pyqt4  
+  - sudo apt-get install python3-pyqt4
+
+9. Install pytest
+  - sudo apt-get install python-pytest
 
     
     
