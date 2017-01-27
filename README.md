@@ -35,8 +35,12 @@ Here is what I have done to install this project and get it running on Ubuntu 14
 5. Install python dev packages for python 3.4
   The dev packages for python 3.4 are needed later on when we install SIPO. The instructions for installing the dev packages for python 3.4:
   - sudo apt-get install python3-dev
-  
-6. Install SIP
+
+6. Install pyqt4 for python 3.4.
+  Pyqt will need to have QT installed for the python. In this case since I am targetting python 3.4 I will need to install the pyqt4 packages for python 3.4.
+  - sudo apt-get install python3-pyqt4
+
+7. Install SIP
   Installing SIP is the first step toward getting the necessary python components installed for QT. Instructions can be found at http://pyqt.sourceforge.net/Docs/PyQt4/installation.html
   
   SIP is a package that generates python bindings to C and C++ libraries. This is required when we use QT as QT generates C libraries that that then need to be usable by python.
@@ -56,15 +60,8 @@ Here is what I have done to install this project and get it running on Ubuntu 14
   - sudo make install
     - will install the recently made SIP libraries
 
-7. Install pyqt4.
-
-- go to https://riverbankcomputing.com/software/pyqt/download and download the pyqt4 source package for the LINUX OS
-  - copy the downloaded tar file to /usr/src
-  - open a terminal on your ubuntu machine
-  - cd /usr/src/
-  - sudo tar -xzf PyQt4_gpl_x11-4.12.tar.gz
-    - Note - the name of your tar gz file may vary depending on latest available pyqt version
-  
+8. Install pyqt4.
+  - sudo apt-get install python3-pyqt4  
 
     
     
