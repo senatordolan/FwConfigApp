@@ -65,7 +65,9 @@ Here is what I have done to install this project and get it running on Ubuntu 14
 
 9. Install pytest
   - sudo apt-get install python-pytest
-
+  
+10. Mod your PYTHONPATH
+  - add the path to FwConfigApp on your PYTHONPATH so you can run the automated tests.
     
     
  
